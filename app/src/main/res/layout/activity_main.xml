@@ -10,29 +10,33 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/result1"
+        android:id="@+id/textViewTitleMinPerKm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:layout_marginStart="20dp"
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="20dp"
-        android:minEms="3"
+        android:text="Minutes per KM"
         android:background="#22000000"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/wheel3dViewMinPerKm"
+        app:layout_constraintEnd_toEndOf="@id/wheel3dViewMinPerKm"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/result2"
+        android:id="@+id/textViewTitleKmPerHour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:layout_marginStart="10dp"
         android:gravity="center"
         android:textSize="20dp"
-        android:minEms="3"
+        android:text="KM per Hour"
         android:background="#22000000"
-        app:layout_constraintStart_toEndOf="@+id/result1"
-        app:layout_constraintTop_toTopOf="@id/result1"/>
+        app:layout_constraintStart_toStartOf="@id/wheel3dViewKmPerHour"
+        app:layout_constraintEnd_toEndOf="@id/wheel3dViewKmPerHour"
+        app:layout_constraintTop_toTopOf="@id/textViewTitleMinPerKm"/>
 
     <com.cncoderx.wheelview.Wheel3DView
         android:id="@+id/wheel3dViewMinPerKm"
@@ -51,7 +55,9 @@
         app:wheelDividerColor="@color/wheel_divider_color"
         app:wheelHighlightColor="@color/wheel_highlight_color"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/result1"/>
+        app:layout_constraintEnd_toStartOf="@id/wheel3dViewKmPerHour"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitleMinPerKm"/>
 
     <com.cncoderx.wheelview.Wheel3DView
         android:id="@+id/wheel3dViewKmPerHour"
@@ -69,26 +75,28 @@
         app:wheelDividerColor="@color/wheel_divider_color"
         app:wheelHighlightColor="@color/wheel_highlight_color"
         app:layout_constraintStart_toEndOf="@+id/wheel3dViewMinPerKm"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/wheel3dViewMinPerKm"/>
 
     <TextView
         android:id="@+id/textViewTitle1k"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:padding="6dp"
         android:gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:textSize="20dp"
         android:minEms="3"
         android:text="1K"
         android:background="#22000000"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/wheel3dViewMinPerKm"
         app:layout_constraintTop_toBottomOf="@+id/wheel3dViewMinPerKm"/>
 
     <TextView
         android:id="@+id/textViewValue1k"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:layout_marginStart="10dp"
         android:gravity="center"
         android:textSize="20dp"
@@ -101,6 +109,7 @@
         android:id="@+id/textViewTitle3k"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="20dp"
@@ -114,6 +123,7 @@
         android:id="@+id/textViewValue3k"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:layout_marginStart="10dp"
         android:gravity="center"
         android:textSize="20dp"
@@ -126,6 +136,7 @@
         android:id="@+id/textViewTitle5k"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="20dp"
@@ -139,6 +150,7 @@
         android:id="@+id/textViewValue5k"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:layout_marginStart="10dp"
         android:gravity="center"
         android:textSize="20dp"
@@ -151,6 +163,7 @@
         android:id="@+id/textViewTitle10k"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="20dp"
@@ -164,6 +177,7 @@
         android:id="@+id/textViewValue10k"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:layout_marginStart="10dp"
         android:gravity="center"
         android:textSize="20dp"
@@ -172,14 +186,11 @@
         app:layout_constraintStart_toEndOf="@id/textViewTitle10k"
         app:layout_constraintTop_toTopOf="@id/textViewTitle10k"/>
 
-
-
-
-
     <TextView
         android:id="@+id/textViewTitle21k"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="20dp"
@@ -193,6 +204,7 @@
         android:id="@+id/textViewValue21k"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:layout_marginStart="10dp"
         android:gravity="center"
         android:textSize="20dp"
@@ -201,13 +213,11 @@
         app:layout_constraintStart_toEndOf="@id/textViewTitle21k"
         app:layout_constraintTop_toTopOf="@id/textViewTitle21k"/>
 
-
-
-
     <TextView
         android:id="@+id/textViewTitle42k"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="20dp"
@@ -221,6 +231,7 @@
         android:id="@+id/textViewValue42k"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="6dp"
         android:layout_marginStart="10dp"
         android:gravity="center"
         android:textSize="20dp"
