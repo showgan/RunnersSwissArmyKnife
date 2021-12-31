@@ -52,6 +52,11 @@ dependencies {
     implementation 'com.orhanobut:dialogplus:1.11@aar'
 
     // WheelView from https://github.com/penglu20/WheelView
-//    implementation 'com.pl:wheelview:0.7.2'
-    implementation 'com.pl:wheelview:0.7.3'
+//    implementation 'com.pl:wheelview:0.7.3'
+
+    // WheelPicker from https://github.com/zyyoona7/WheelPicker
+//    implementation 'com.github.zyyoona7:wheelview:2.0.4'
+
+    // WheelView from https://github.com/CNCoderX/WheelView
+    implementation 'com.cncoderx.wheelview:library:1.2.5'
 }

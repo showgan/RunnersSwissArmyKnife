@@ -9,40 +9,224 @@
     android:textDirection="ltr"
     tools:context=".MainActivity">
 
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Hello World!"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-
     <TextView
-        android:id="@+id/result"
+        android:id="@+id/result1"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:gravity="center_vertical"
-        android:background="#669911"
-        android:text="请选择时间"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:background="#22000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <com.pl.wheelview.WheelView
-        android:id="@+id/timePicker"
-        android:layout_width="250dp"
+    <TextView
+        android:id="@+id/result2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:lineColor="#ff0000"
-        app:maskDarkColor="#11000000"
-        app:maskLightColor="#11000000"
-        app:normalTextColor="#00ff00"
-        app:selectedTextColor="#092BEA"
-        app:lineHeight="1.7dp"
-        app:normalTextSize="14dp"
-        app:selectedTextSize="22dp"
-        app:isCyclic="true"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:background="#22000000"
+        app:layout_constraintStart_toEndOf="@+id/result1"
+        app:layout_constraintTop_toTopOf="@id/result1"/>
+
+    <com.cncoderx.wheelview.Wheel3DView
+        android:id="@+id/wheel3dViewMinPerKm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        app:wheelCyclic="true"
+        app:wheelEntries="@array/default_array"
+        app:wheelItemCount="11"
+        app:wheelItemWidth="160dp"
+        app:wheelItemHeight="40dp"
+        app:wheelTextSize="@dimen/wheel_text_size"
+        app:wheelTextColor="@color/wheel_text_color"
+        app:wheelSelectedTextColor="@color/wheel_selected_text_color"
+        app:wheelDividerColor="@color/wheel_divider_color"
+        app:wheelHighlightColor="@color/wheel_highlight_color"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/result"/>
+        app:layout_constraintTop_toBottomOf="@id/result1"/>
+
+    <com.cncoderx.wheelview.Wheel3DView
+        android:id="@+id/wheel3dViewKmPerHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:wheelCyclic="true"
+        app:wheelEntries="@array/default_array"
+        app:wheelItemCount="11"
+        app:wheelItemWidth="160dp"
+        app:wheelItemHeight="40dp"
+        app:wheelTextSize="@dimen/wheel_text_size"
+        app:wheelTextColor="@color/wheel_text_color"
+        app:wheelSelectedTextColor="@color/wheel_selected_text_color"
+        app:wheelDividerColor="@color/wheel_divider_color"
+        app:wheelHighlightColor="@color/wheel_highlight_color"
+        app:layout_constraintStart_toEndOf="@+id/wheel3dViewMinPerKm"
+        app:layout_constraintTop_toTopOf="@id/wheel3dViewMinPerKm"/>
+
+    <TextView
+        android:id="@+id/textViewTitle1k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:text="1K"
+        android:background="#22000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wheel3dViewMinPerKm"/>
+
+    <TextView
+        android:id="@+id/textViewValue1k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:background="#22000000"
+        app:layout_constraintStart_toEndOf="@id/textViewTitle1k"
+        app:layout_constraintTop_toTopOf="@id/textViewTitle1k"/>
+
+    <TextView
+        android:id="@+id/textViewTitle3k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:text="3K"
+        android:background="#22000000"
+        app:layout_constraintStart_toStartOf="@id/textViewTitle1k"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle1k"/>
+
+    <TextView
+        android:id="@+id/textViewValue3k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:background="#22000000"
+        app:layout_constraintStart_toEndOf="@id/textViewTitle3k"
+        app:layout_constraintTop_toTopOf="@id/textViewTitle3k"/>
+
+    <TextView
+        android:id="@+id/textViewTitle5k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:text="5K"
+        android:background="#22000000"
+        app:layout_constraintStart_toStartOf="@id/textViewTitle1k"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle3k"/>
+
+    <TextView
+        android:id="@+id/textViewValue5k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:background="#22000000"
+        app:layout_constraintStart_toEndOf="@id/textViewTitle5k"
+        app:layout_constraintTop_toTopOf="@id/textViewTitle5k"/>
+
+    <TextView
+        android:id="@+id/textViewTitle10k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:text="10K"
+        android:background="#22000000"
+        app:layout_constraintStart_toStartOf="@id/textViewTitle1k"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle5k"/>
+
+    <TextView
+        android:id="@+id/textViewValue10k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:background="#22000000"
+        app:layout_constraintStart_toEndOf="@id/textViewTitle10k"
+        app:layout_constraintTop_toTopOf="@id/textViewTitle10k"/>
+
+
+
+
+
+    <TextView
+        android:id="@+id/textViewTitle21k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:text="21K"
+        android:background="#22000000"
+        app:layout_constraintStart_toStartOf="@id/textViewTitle1k"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle10k"/>
+
+    <TextView
+        android:id="@+id/textViewValue21k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:background="#22000000"
+        app:layout_constraintStart_toEndOf="@id/textViewTitle21k"
+        app:layout_constraintTop_toTopOf="@id/textViewTitle21k"/>
+
+
+
+
+    <TextView
+        android:id="@+id/textViewTitle42k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:text="42K"
+        android:background="#22000000"
+        app:layout_constraintStart_toStartOf="@id/textViewTitle1k"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle21k"/>
+
+    <TextView
+        android:id="@+id/textViewValue42k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:minEms="3"
+        android:background="#22000000"
+        app:layout_constraintStart_toEndOf="@id/textViewTitle42k"
+        app:layout_constraintTop_toTopOf="@id/textViewTitle42k"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
