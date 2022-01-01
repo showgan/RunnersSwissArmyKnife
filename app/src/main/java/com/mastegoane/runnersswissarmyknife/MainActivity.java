@@ -31,9 +31,9 @@ public class MainActivity extends BaseActivity {
             mBinding.radioGroupMainSelectFragment.check(R.id.radioButtonMainDistance);
         }
 
-        final int speedEntryIndex = mSharedPreferences.getInt("sp_speed_entry_index", 0);
+        final int speedEntryIndex = mSharedPreferences.getInt("sp_speed_entry_index", 240);
         mMainViewModel.setSpeedEntryIndex(speedEntryIndex);
-        final int distanceEntryIndex = mSharedPreferences.getInt("sp_distance_entry_index", 0);
+        final int distanceEntryIndex = mSharedPreferences.getInt("sp_distance_entry_index", 5);
         mMainViewModel.setDistanceEntryIndex(distanceEntryIndex);
 
         selectFragment(fragmentIndex);
