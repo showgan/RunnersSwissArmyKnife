@@ -5,246 +5,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#557799"
     android:layoutDirection="ltr"
     android:textDirection="ltr"
     tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroupMainSelectFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:checkedButton="@id/radioButtonMainSpeed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <RadioButton
+            android:id="@+id/radioButtonMainSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"
+            android:layout_gravity="center_vertical"
+            android:text="Speed"
+            android:padding="4dp"/>
+        <RadioButton
+            android:id="@+id/radioButtonMainDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"
+            android:layout_gravity="center_vertical"
+            android:text="Distance"
+            android:padding="4dp"/>
+    </RadioGroup>
 
     <FrameLayout
         android:id="@+id/frameLayoutMainFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewTitleMinPerKm"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:gravity="center"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:textSize="20dp"-->
-<!--        android:text="Minutes per KM"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toStartOf="@id/wheel3dViewMinPerKm"-->
-<!--        app:layout_constraintEnd_toEndOf="@id/wheel3dViewMinPerKm"-->
-<!--        app:layout_constraintTop_toTopOf="parent"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewTitleKmPerHour"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:gravity="center"-->
-<!--        android:textSize="20dp"-->
-<!--        android:text="KM per Hour"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toStartOf="@id/wheel3dViewKmPerHour"-->
-<!--        app:layout_constraintEnd_toEndOf="@id/wheel3dViewKmPerHour"-->
-<!--        app:layout_constraintTop_toTopOf="@id/textViewTitleMinPerKm"/>-->
-
-<!--    <com.cncoderx.wheelview.Wheel3DView-->
-<!--        android:id="@+id/wheel3dViewMinPerKm"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        app:wheelCyclic="true"-->
-<!--        app:wheelEntries="@array/default_array"-->
-<!--        app:wheelItemCount="11"-->
-<!--        app:wheelItemWidth="160dp"-->
-<!--        app:wheelItemHeight="40dp"-->
-<!--        app:wheelTextSize="@dimen/wheel_text_size"-->
-<!--        app:wheelTextColor="@color/wheel_text_color"-->
-<!--        app:wheelSelectedTextColor="@color/wheel_selected_text_color"-->
-<!--        app:wheelDividerColor="@color/wheel_divider_color"-->
-<!--        app:wheelHighlightColor="@color/wheel_highlight_color"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toStartOf="@id/wheel3dViewKmPerHour"-->
-<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/textViewTitleMinPerKm"/>-->
-
-<!--    <com.cncoderx.wheelview.Wheel3DView-->
-<!--        android:id="@+id/wheel3dViewKmPerHour"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        app:wheelCyclic="true"-->
-<!--        app:wheelEntries="@array/default_array"-->
-<!--        app:wheelItemCount="11"-->
-<!--        app:wheelItemWidth="160dp"-->
-<!--        app:wheelItemHeight="40dp"-->
-<!--        app:wheelTextSize="@dimen/wheel_text_size"-->
-<!--        app:wheelTextColor="@color/wheel_text_color"-->
-<!--        app:wheelSelectedTextColor="@color/wheel_selected_text_color"-->
-<!--        app:wheelDividerColor="@color/wheel_divider_color"-->
-<!--        app:wheelHighlightColor="@color/wheel_highlight_color"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/wheel3dViewMinPerKm"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="@id/wheel3dViewMinPerKm"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewTitle1k"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:gravity="center"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:textSize="20dp"-->
-<!--        android:minEms="3"-->
-<!--        android:text="1K"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toStartOf="@id/wheel3dViewMinPerKm"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/wheel3dViewMinPerKm"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewValue1k"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:gravity="center"-->
-<!--        android:textSize="20dp"-->
-<!--        android:minEms="3"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toEndOf="@id/textViewTitle1k"-->
-<!--        app:layout_constraintTop_toTopOf="@id/textViewTitle1k"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewTitle3k"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:gravity="center"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:textSize="20dp"-->
-<!--        android:minEms="3"-->
-<!--        android:text="3K"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toStartOf="@id/textViewTitle1k"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textViewTitle1k"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewValue3k"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:gravity="center"-->
-<!--        android:textSize="20dp"-->
-<!--        android:minEms="3"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toEndOf="@id/textViewTitle3k"-->
-<!--        app:layout_constraintTop_toTopOf="@id/textViewTitle3k"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewTitle5k"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:gravity="center"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:textSize="20dp"-->
-<!--        android:minEms="3"-->
-<!--        android:text="5K"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toStartOf="@id/textViewTitle1k"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textViewTitle3k"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewValue5k"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:gravity="center"-->
-<!--        android:textSize="20dp"-->
-<!--        android:minEms="3"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toEndOf="@id/textViewTitle5k"-->
-<!--        app:layout_constraintTop_toTopOf="@id/textViewTitle5k"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewTitle10k"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:gravity="center"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:textSize="20dp"-->
-<!--        android:minEms="3"-->
-<!--        android:text="10K"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toStartOf="@id/textViewTitle1k"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textViewTitle5k"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewValue10k"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:gravity="center"-->
-<!--        android:textSize="20dp"-->
-<!--        android:minEms="3"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toEndOf="@id/textViewTitle10k"-->
-<!--        app:layout_constraintTop_toTopOf="@id/textViewTitle10k"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewTitle21k"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:gravity="center"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:textSize="20dp"-->
-<!--        android:minEms="3"-->
-<!--        android:text="21K"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toStartOf="@id/textViewTitle1k"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textViewTitle10k"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewValue21k"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:gravity="center"-->
-<!--        android:textSize="20dp"-->
-<!--        android:minEms="3"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toEndOf="@id/textViewTitle21k"-->
-<!--        app:layout_constraintTop_toTopOf="@id/textViewTitle21k"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewTitle42k"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:gravity="center"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:textSize="20dp"-->
-<!--        android:minEms="3"-->
-<!--        android:text="42K"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toStartOf="@id/textViewTitle1k"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textViewTitle21k"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewValue42k"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="6dp"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:gravity="center"-->
-<!--        android:textSize="20dp"-->
-<!--        android:minEms="3"-->
-<!--        android:background="#22000000"-->
-<!--        app:layout_constraintStart_toEndOf="@id/textViewTitle42k"-->
-<!--        app:layout_constraintTop_toTopOf="@id/textViewTitle42k"/>-->
-
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupMainSelectFragment"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
