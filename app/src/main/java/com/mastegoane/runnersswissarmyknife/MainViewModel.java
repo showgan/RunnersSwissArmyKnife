@@ -53,6 +53,10 @@ public class MainViewModel extends AndroidViewModel {
         sharedPrefEditor.apply();
     }
 
+    public long getCurrentPaceMillisecPerKm() {
+        return mSpeedEntryIndex * mStepMillisecPerKm + mStaringMillisecPerKm;
+    }
+
     public int getDistanceEntryIndex() {
         return mDistanceEntryIndex;
     }
@@ -64,13 +68,31 @@ public class MainViewModel extends AndroidViewModel {
         sharedPrefEditor.apply();
     }
 
+    public long getStaringMillisecPerKm() {
+        return mStaringMillisecPerKm;
+    }
+
+    public long getStepMillisecPerKm() {
+        return mStepMillisecPerKm;
+    }
+
+    public float getKm2Mile() {
+        return mKm2Mile;
+    }
+
     private final Application mApplication;
 
     private final SharedPreferences mSharedPreferences;
 
     private int mCurrentFragmentIndex = 1;
     private int mSpeedEntryIndex = 0;
+
     private int mDistanceEntryIndex = 0;
+
+    private final long mStaringMillisecPerKm = 2 * 60 * 1000; // 2 minutes per km
+    private final long mStepMillisecPerKm = 1000;
+
+    private final float mKm2Mile = 1.60934f;
 
     private static final String TAG = MainViewModel.class.getSimpleName();
 }

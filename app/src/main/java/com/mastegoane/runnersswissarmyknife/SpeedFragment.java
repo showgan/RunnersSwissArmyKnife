@@ -1,24 +1,18 @@
 package com.mastegoane.runnersswissarmyknife;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.cncoderx.wheelview.OnWheelChangedListener;
 import com.cncoderx.wheelview.WheelView;
-import com.mastegoane.runnersswissarmyknife.databinding.FragmentDistanceBinding;
 import com.mastegoane.runnersswissarmyknife.databinding.FragmentSpeedBinding;
-
 import java.util.ArrayList;
 
 /**
@@ -83,28 +77,26 @@ public class SpeedFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mMainViewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
 
-        // minPerKm <--> kmPerHour
-        // km <--> time
         ArrayList<String> minPerKmValues = new ArrayList<>();
         ArrayList<String> kmPerHourValues = new ArrayList<>();
         ArrayList<String> minPerMileValues = new ArrayList<>();
         ArrayList<String> milePerHourValues = new ArrayList<>();
-        long currentPaceMillisecPerKm = mStaringMillisecPerKm;
+        long currentPaceMillisecPerKm = mMainViewModel.getStaringMillisecPerKm();
         for (int index = 0; index < 1000; ++index) {
-            final String minPerKm = mMainViewModel.millisecToTimeStr(currentPaceMillisecPerKm);
-            minPerKmValues.add(minPerKm);
+            final String currentPacePerKmStr = mMainViewModel.millisecToTimeStr(currentPaceMillisecPerKm);
+            minPerKmValues.add(currentPacePerKmStr);
 
             final float currentSpeed = 60f / (currentPaceMillisecPerKm / 60000f);
             final String  kmPerHour = String.format("%.2f", currentSpeed);
             kmPerHourValues.add(kmPerHour);
 
-            final String minPerMile = mMainViewModel.millisecToTimeStr(Math.round(currentPaceMillisecPerKm * mKm2Mile));
+            final String minPerMile = mMainViewModel.millisecToTimeStr(Math.round(currentPaceMillisecPerKm * mMainViewModel.getKm2Mile()));
             minPerMileValues.add(minPerMile);
 
-            final String milePerHour = String.format("%.2f", currentSpeed / mKm2Mile);
+            final String milePerHour = String.format("%.2f", currentSpeed / mMainViewModel.getKm2Mile());
             milePerHourValues.add(milePerHour);
 
-            currentPaceMillisecPerKm = currentPaceMillisecPerKm + mStepMillisecPerKm;
+            currentPaceMillisecPerKm = currentPaceMillisecPerKm + mMainViewModel.getStepMillisecPerKm();
         }
         mBinding.wheel3dViewMinPerKm.setEntries(minPerKmValues);
         mBinding.wheel3dViewKmPerHour.setEntries(kmPerHourValues);
@@ -161,7 +153,7 @@ public class SpeedFragment extends Fragment {
         mCurrentIndexLD.observe(getViewLifecycleOwner(), new Observer<Integer>() {
             @Override
             public void onChanged(Integer integer) {
-                final float factor = ((mStaringMillisecPerKm + integer * mStepMillisecPerKm));
+                final float factor = ((mMainViewModel.getStaringMillisecPerKm() + integer * mMainViewModel.getStepMillisecPerKm()));
                 final long time1k = (long)(1f * factor);
                 final long time3k = (long)(3f * factor);
                 final long time5k = (long)(5f * factor);
@@ -191,9 +183,9 @@ public class SpeedFragment extends Fragment {
     private MainViewModel mMainViewModel;
     private FragmentSpeedBinding mBinding;
 
-    private final long mStaringMillisecPerKm = 2 * 60 * 1000; // 2 minutes per km
-    private final long mStepMillisecPerKm = 1000; // 1000 milliseconds
-    private final float mKm2Mile = 1.60934f;
+//    private final long mStaringMillisecPerKm = 2 * 60 * 1000; // 2 minutes per km
+//    private final long mStepMillisecPerKm = 1000;
+//    private final float mKm2Mile = 1.60934f;
     private MutableLiveData<Integer> mCurrentIndexLD = new MutableLiveData<>();
 
     private static final String TAG = FragmentSpeedBinding.class.getSimpleName();
