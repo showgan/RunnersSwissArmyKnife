@@ -4,14 +4,25 @@
     <dimen name="wheel_divider_height">1dp</dimen>
 
 <!--    <dimen name="wheel_item_height">40dp</dimen>-->
-    <dimen name="wheel_item_height">30dp</dimen>
+    <dimen name="wheel_item_height">25dp</dimen>
+    <dimen name="wheel_item_height355">30dp</dimen>
+    <dimen name="wheel_item_height535">40dp</dimen>
 
 <!--    <dimen name="wheel_item_width">160dp</dimen>-->
     <dimen name="wheel_item_width_speed">60dp</dimen>
+    <dimen name="wheel_item_width_speed535">90dp</dimen>
     <dimen name="wheel_item_width_distance">90dp</dimen>
+    <dimen name="wheel_item_width_distance535">120dp</dimen>
 
 <!--    <dimen name="wheel_text_size">20sp</dimen>-->
-    <dimen name="wheel_text_size">18sp</dimen>
+    <dimen name="wheel_text_size">15dp</dimen>
+    <dimen name="wheel_text_size355">18dp</dimen>
+    <dimen name="wheel_text_size535">24dp</dimen>
 
-    <dimen name="wheel_title_text_size">13sp</dimen>
+    <dimen name="text_views_text_size_speed">14dp</dimen>
+
+    <dimen name="wheel_title_text_size_speed">9dp</dimen>
+    <dimen name="wheel_title_text_size_distance">11dp</dimen>
+    <dimen name="wheel_title_text_size355">13dp</dimen>
+    <dimen name="wheel_title_text_size535">21dp</dimen>
 </resources>

@@ -1,8 +1,11 @@
 package com.mastegoane.runnersswissarmyknife;
 
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -21,6 +24,10 @@ public class MainActivity extends BaseActivity {
 
         mBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
+
+//        Configuration config = getResources().getConfiguration();
+//        Toast.makeText(this, "YYY "  + config.smallestScreenWidthDp, Toast.LENGTH_LONG).show();
+////        Log.d(TAG, "YYY "  + config.smallestScreenWidthDp);
 
         mFragmentManager = getSupportFragmentManager();
 
