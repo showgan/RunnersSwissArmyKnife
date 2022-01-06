@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">כלים לחובבי ריצה</string>
+
+    <string name="button_select">בחירה</string>
+
+    <string name="speed">מהירות</string>
+    <string name="distance">מרחק</string>
+    <string name="time">זמן</string>
+    <string name="distance_km">מרחק\nק\"מ</string>
+    <string name="distance_mile">מרחק\nמייל</string>
+    <string name="pace">קצב</string>
+    <string name="per_km">לק\"מ</string>
+    <string name="per_mile">למייל</string>
+    <string name="km_per_hour">קמ\"ש</string>
+    <string name="miles_per_hour">מייל לשעה</string>
+    <string name="minutes_per_km">דקות\nלק\"מ</string>
+    <string name="km_per_hour_newlines">קמ\"ש</string>
+    <string name="minutes_per_mile">דקות\nלק\"מ</string>
+    <string name="mile_per_hour_newlines">מייל\nלשעה</string>
+
+    <string name="one_k">1 ק\"מ</string>
+    <string name="three_k">3 ק\"מ</string>
+    <string name="five_k">5 ק\"מ</string>
+    <string name="ten_k">10 ק\"מ</string>
+    <string name="twentyone_k">21 ק\"מ</string>
+    <string name="fortytwo_k">42 ק\"מ</string>
+
+</resources>

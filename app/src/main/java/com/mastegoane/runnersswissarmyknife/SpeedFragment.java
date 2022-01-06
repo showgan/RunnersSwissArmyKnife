@@ -14,6 +14,7 @@ import com.cncoderx.wheelview.OnWheelChangedListener;
 import com.cncoderx.wheelview.WheelView;
 import com.mastegoane.runnersswissarmyknife.databinding.FragmentSpeedBinding;
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -87,13 +88,13 @@ public class SpeedFragment extends Fragment {
             minPerKmValues.add(currentPacePerKmStr);
 
             final float currentSpeed = 60f / (currentPaceMillisecPerKm / 60000f);
-            final String  kmPerHour = String.format("%.2f", currentSpeed);
+            final String  kmPerHour = String.format(Locale.ENGLISH, "%.2f", currentSpeed);
             kmPerHourValues.add(kmPerHour);
 
             final String minPerMile = mMainViewModel.millisecToTimeStr(Math.round(currentPaceMillisecPerKm * mMainViewModel.getKm2Mile()));
             minPerMileValues.add(minPerMile);
 
-            final String milePerHour = String.format("%.2f", currentSpeed / mMainViewModel.getKm2Mile());
+            final String milePerHour = String.format(Locale.ENGLISH, "%.2f", currentSpeed / mMainViewModel.getKm2Mile());
             milePerHourValues.add(milePerHour);
 
             currentPaceMillisecPerKm = currentPaceMillisecPerKm + mMainViewModel.getStepMillisecPerKm();

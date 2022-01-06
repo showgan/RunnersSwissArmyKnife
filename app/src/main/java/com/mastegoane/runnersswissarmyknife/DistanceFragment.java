@@ -16,6 +16,7 @@ import com.cncoderx.wheelview.WheelView;
 import com.mastegoane.runnersswissarmyknife.databinding.FragmentDistanceBinding;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -89,11 +90,11 @@ public class DistanceFragment extends Fragment {
             timeValues.add(currentTimeStr);
 
             final float distanceKm = (float)currentTimeMillisec / currentPaceMillisecPerKm;
-            final String distanceKmStr = String.format("%.2f", distanceKm);
+            final String distanceKmStr = String.format(Locale.ENGLISH, "%.2f", distanceKm);
             distanceKmValues.add(distanceKmStr);
 
             final float distanceMile = distanceKm / mMainViewModel.getKm2Mile();
-            final String distanceMileStr = String.format("%.2f", distanceMile);
+            final String distanceMileStr = String.format(Locale.ENGLISH, "%.2f", distanceMile);
             distanceMileValues.add(distanceMileStr);
 
             currentTimeMillisec = currentTimeMillisec + 5 * 60000; // step by 5 minutes
@@ -139,8 +140,8 @@ public class DistanceFragment extends Fragment {
 
         final float currentSpeedKm = (float)(3600000) / currentPaceMillisecPerKm;
         final float currentSpeedMile = currentSpeedKm / mMainViewModel.getKm2Mile();
-        mBinding.textViewSpeedKm.setText(String.format("%.2f", currentSpeedKm));
-        mBinding.textViewSpeedMile.setText(String.format("%.2f", currentSpeedMile));
+        mBinding.textViewSpeedKm.setText(String.format(Locale.ENGLISH, "%.2f", currentSpeedKm));
+        mBinding.textViewSpeedMile.setText(String.format(Locale.ENGLISH, "%.2f", currentSpeedMile));
     }
 
     private MainViewModel mMainViewModel;

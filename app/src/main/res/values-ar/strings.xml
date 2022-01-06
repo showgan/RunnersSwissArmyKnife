@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">أدوات العدائين</string>
+
+    <string name="button_select">اختيار</string>
+
+    <string name="speed">سرعة</string>
+    <string name="distance">مسافة</string>
+    <string name="time">وقت</string>
+    <string name="distance_km">مسافة\nكيلومتر</string>
+    <string name="distance_mile">مسافة\nميل</string>
+    <string name="pace">مدة زمنية</string>
+    <string name="per_km">للكيلومتر الواحد</string>
+    <string name="per_mile">للميل الواحد</string>
+    <string name="km_per_hour">كيلومتر في الساعة</string>
+    <string name="miles_per_hour">ميل في الساعة</string>
+    <string name="minutes_per_km">دقائق\nللكيلومتر\nالواحد</string>
+    <string name="km_per_hour_newlines">كيلومتر\nفي\nالساعة</string>
+    <string name="minutes_per_mile">دقائق\nللميل\nالواحد</string>
+    <string name="mile_per_hour_newlines">ميل\nفي\nالساعة</string>
+
+    <string name="one_k">كم 1</string>
+    <string name="three_k">3 كم</string>
+    <string name="five_k">5 كم</string>
+    <string name="ten_k">10 كم</string>
+    <string name="twentyone_k">21 كم</string>
+    <string name="fortytwo_k">42 كم</string>
+
+</resources>

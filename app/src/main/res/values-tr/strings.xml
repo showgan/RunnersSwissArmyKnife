@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Runner\'s Swiss Army Knife</string>
+
+    <!--    // a á b c ç ć d e é f g ǵ ğ h ḣ ı i j k ḱ l ĺ m n o ö p ṕ q r s ş ś š t ṫ u ü w x y z ź-->
+    <!--    // A Á B C Ç Ć D E É F G Ǵ Ğ H Ḣ I İ J K Ḱ L Ĺ M N O Ö P Ṕ Q R S Ş Ś Š T Ṫ U Ü W X Y Z Ź-->
+    <!--    // áçćéǵğḣıḱĺöṕşśšṫüź-->
+    <!--    // ÁÇĆÉǴĞḢİḰĹÖṔŞŚŠṪÜŹ-->
+
+    <string name="button_select">Seç</string>
+
+    <string name="speed">Sürat</string>
+    <string name="distance">Mesafe</string>
+    <string name="time">zaman</string>
+    <string name="distance_km">mesafe\nkilometre</string>
+    <string name="distance_mile">mesafe\nmil</string>
+    <string name="pace">Hız</string>
+    <string name="per_km">kilometre başına</string>
+    <string name="per_mile">mil başına</string>
+    <string name="km_per_hour">saatte kilometre</string>
+    <string name="miles_per_hour">saatte mil</string>
+    <string name="minutes_per_km">kilometre\nbaşına\ndakika</string>
+    <string name="km_per_hour_newlines">saatte\nkilometre</string>
+    <string name="minutes_per_mile">mil\nbaşına\ndakika</string>
+    <string name="mile_per_hour_newlines">saatte\nmil</string>
+
+    <string name="one_k">1 K</string>
+    <string name="three_k">3 K</string>
+    <string name="five_k">5 K</string>
+    <string name="ten_k">10 K</string>
+    <string name="twentyone_k">21 K</string>
+    <string name="fortytwo_k">42 K</string>
+</resources>

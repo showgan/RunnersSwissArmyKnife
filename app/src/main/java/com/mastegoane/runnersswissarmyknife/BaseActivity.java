@@ -18,7 +18,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void attachBaseContext(Context newBase) {
         mSharedPreferences = newBase.getSharedPreferences("runnersswissarmyknife", MODE_PRIVATE);
-        final int languageInt = mSharedPreferences.getInt("sp_language", GlobalSettings.Language.ADIGA.ordinal());
+        final int languageInt = mSharedPreferences.getInt("sp_language", GlobalSettings.Language.ENGLISH.ordinal());
         GlobalSettings.inst().setLanguage(GlobalSettings.Language.values()[languageInt]);
         String localeTag;
         switch (GlobalSettings.Language.values()[languageInt]) {

@@ -27,7 +27,7 @@
             android:textColor="@color/white"
             android:buttonTint="@color/white"
             android:layout_gravity="center_vertical"
-            android:text="Speed"
+            android:text="@string/speed"
             android:padding="4dp"/>
         <RadioButton
             android:id="@+id/radioButtonMainDistance"
@@ -37,7 +37,7 @@
             android:textColor="@color/white"
             android:buttonTint="@color/white"
             android:layout_gravity="center_vertical"
-            android:text="Distance"
+            android:text="@string/distance"
             android:padding="4dp"/>
     </RadioGroup>
 
@@ -48,4 +48,14 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroupMainSelectFragment"
         app:layout_constraintBottom_toBottomOf="parent">
     </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="buttonChangeLanguageClicked"
+        android:background="@drawable/ic_baseline_language_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

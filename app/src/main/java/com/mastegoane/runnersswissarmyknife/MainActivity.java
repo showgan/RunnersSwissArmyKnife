@@ -1,18 +1,20 @@
 package com.mastegoane.runnersswissarmyknife;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
 import android.widget.RadioGroup;
-import android.widget.Toast;
-
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 import com.mastegoane.runnersswissarmyknife.databinding.ActivityMainBinding;
 
 public class MainActivity extends BaseActivity {
+
+    public void buttonChangeLanguageClicked(View view) {
+        startActivity(new Intent(this, SelectLanguageActivity.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,11 @@ public class MainActivity extends BaseActivity {
 
         mBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
+
+        final boolean firstTimeEverLanguage = mSharedPreferences.getBoolean("sp_first_time_ever_language", true);
+        if (firstTimeEverLanguage) {
+            startActivity(new Intent(this, SelectLanguageActivity.class));
+        }
 
 //        Configuration config = getResources().getConfiguration();
 //        Toast.makeText(this, "YYY "  + config.smallestScreenWidthDp, Toast.LENGTH_LONG).show();

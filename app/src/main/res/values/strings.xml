@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Runner\'s Swiss Army Knife</string>
-    <string-array name="default_array">
+
+    <string-array name="sample_array">
         <item>test1</item>
         <item>test2</item>
         <item>test3</item>
@@ -12,6 +13,34 @@
         <item>test9</item>
         <item>test10</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_adiga" translatable="false">Adıǵe</string>
+    <string name="language_arabic" translatable="false">العربية</string>
+    <string name="language_hebrew" translatable="false">עברית</string>
+    <string name="language_turkish" translatable="false">Türkçe</string>
+
+    <string name="button_select">Select</string>
+
+    <string name="speed">Speed</string>
+    <string name="distance">Distance</string>
+    <string name="time">time</string>
+    <string name="distance_km">distance\nkm</string>
+    <string name="distance_mile">distance\nmile</string>
+    <string name="pace">Pace</string>
+    <string name="per_km">per km</string>
+    <string name="per_mile">per mile</string>
+    <string name="km_per_hour">km per hour</string>
+    <string name="miles_per_hour">miles per hour</string>
+    <string name="minutes_per_km">minutes\nper\nkm</string>
+    <string name="km_per_hour_newlines">km\nper\nhour</string>
+    <string name="minutes_per_mile">minutes\nper\nmile</string>
+    <string name="mile_per_hour_newlines">mile\nper\nhour</string>
+
+    <string name="one_k">1 K</string>
+    <string name="three_k">3 K</string>
+    <string name="five_k">5 K</string>
+    <string name="ten_k">10 K</string>
+    <string name="twentyone_k">21 K</string>
+    <string name="fortytwo_k">42 K</string>
 </resources>

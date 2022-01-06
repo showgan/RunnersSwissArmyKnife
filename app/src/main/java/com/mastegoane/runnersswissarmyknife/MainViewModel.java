@@ -6,6 +6,8 @@ import android.app.Application;
 import android.content.SharedPreferences;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class MainViewModel extends AndroidViewModel {
@@ -21,13 +23,13 @@ public class MainViewModel extends AndroidViewModel {
         final long minutes = TimeUnit.MILLISECONDS.toMinutes(millisec);
         final long seconds = TimeUnit.MILLISECONDS.toSeconds(millisec);
         if (millisec >= 3600000) {
-            timeStr = String.format("%2d:%02d:%02d",
+            timeStr = String.format(Locale.ENGLISH, "%2d:%02d:%02d",
                     hours,
                     minutes - TimeUnit.HOURS.toMinutes(hours),
                     seconds - TimeUnit.MINUTES.toSeconds(minutes));
 
         } else {
-            timeStr = String.format("%2d:%02d",
+            timeStr = String.format(Locale.ENGLISH, "%2d:%02d",
                     minutes,
                     seconds - TimeUnit.MINUTES.toSeconds(minutes));
         }

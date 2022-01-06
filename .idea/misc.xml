@@ -3,9 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/background_option_new.xml" value="0.5157407407407407" />
+        <entry key="app/src/main/res/drawable-v24/background_option_new_selected.xml" value="0.5157407407407407" />
+        <entry key="app/src/main/res/drawable-v24/background_option_new_unselected.xml" value="0.5157407407407407" />
+        <entry key="app/src/main/res/drawable-v24/background_select_new.xml" value="0.5157407407407407" />
+        <entry key="app/src/main/res/drawable-v24/background_select_new_disabled.xml" value="0.5157407407407407" />
+        <entry key="app/src/main/res/drawable-v24/background_select_new_enabled.xml" value="0.5157407407407407" />
+        <entry key="app/src/main/res/drawable/bg_wheels.xml" value="0.5611111111111111" />
+        <entry key="app/src/main/res/layout-sw355dp/fragment_distance.xml" value="0.2695035460992908" />
+        <entry key="app/src/main/res/layout-sw355dp/fragment_speed.xml" value="0.2695035460992908" />
+        <entry key="app/src/main/res/layout-sw375dp/fragment_speed.xml" value="0.2695035460992908" />
+        <entry key="app/src/main/res/layout-sw405dp/fragment_speed.xml" value="0.2695035460992908" />
+        <entry key="app/src/main/res/layout-sw535dp/fragment_distance.xml" value="0.2035195103289977" />
+        <entry key="app/src/main/res/layout-sw535dp/fragment_speed.xml" value="0.2035195103289977" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27710233029381964" />
+        <entry key="app/src/main/res/layout/activity_select_language.xml" value="0.43566362715298884" />
         <entry key="app/src/main/res/layout/fragment_distance.xml" value="0.4432624113475177" />
-        <entry key="app/src/main/res/layout/fragment_speed.xml" value="0.4432624113475177" />
+        <entry key="app/src/main/res/layout/fragment_speed.xml" value="0.67" />
       </map>
     </option>
   </component>

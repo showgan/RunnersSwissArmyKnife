@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Raçerexem Ya Ade-Wade</string>
+
+    <!--    // a á b c ç ć d e é f g ǵ ğ h ḣ ı i j k ḱ l ĺ m n o ö p ṕ q r s ş ś š t ṫ u ü w x y z ź-->
+    <!--    // A Á B C Ç Ć D E É F G Ǵ Ğ H Ḣ I İ J K Ḱ L Ĺ M N O Ö P Ṕ Q R S Ş Ś Š T Ṫ U Ü W X Y Z Ź-->
+    <!--    // áçćéǵğḣıḱĺöṕşśšṫüź-->
+    <!--    // ÁÇĆÉǴĞḢİḰĹÖṔŞŚŠṪÜŹ-->
+
+    <string name="button_select">Kıxeź</string>
+
+    <string name="speed">Çıqeyağe</string>
+    <string name="distance">Çıjağe</string>
+    <string name="time">waḣte</string>
+    <string name="distance_km">çıjağe\nḱm</string>
+    <string name="distance_mile">çıjağe\nmil</string>
+    <string name="pace">Psıćağe</string>
+    <string name="per_km">zı ḱm\'m</string>
+    <string name="per_mile">zı mil\'m</string>
+    <string name="km_per_hour">ḱm zı sehatım</string>
+    <string name="miles_per_hour">mil zı sehatım</string>
+    <string name="minutes_per_km">dake\nzı\nḱm\'m</string>
+    <string name="km_per_hour_newlines">ḱm\nzı\nsehatım</string>
+    <string name="minutes_per_mile">dake\nzı\nmil\'m</string>
+    <string name="mile_per_hour_newlines">mil\nzı\nsehatım</string>
+
+    <string name="one_k">1 Ḱ</string>
+    <string name="three_k">3 Ḱ</string>
+    <string name="five_k">5 Ḱ</string>
+    <string name="ten_k">10 Ḱ</string>
+    <string name="twentyone_k">21 Ḱ</string>
+    <string name="fortytwo_k">42 Ḱ</string>
+</resources>
