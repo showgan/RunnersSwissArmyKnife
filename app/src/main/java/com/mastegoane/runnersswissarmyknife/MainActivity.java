@@ -21,7 +21,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         mMainViewModel = new ViewModelProvider(this,
-                ViewModelProvider.AndroidViewModelFactory.getInstance(this.getApplication()))
+                (ViewModelProvider.Factory)ViewModelProvider.AndroidViewModelFactory.getInstance(this.getApplication()))
                 .get(MainViewModel.class);
 
         mBinding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -78,17 +78,14 @@ public class MainActivity extends BaseActivity {
 
     private void selectFragment(int index) {
         final FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-        switch (index) {
-            case 1:
-                SpeedFragment speedFragment = new SpeedFragment();
-                fragmentTransaction.replace(R.id.frameLayoutMainFragment, speedFragment, null);
+        if (index == 1) {
+            SpeedFragment speedFragment = new SpeedFragment();
+            fragmentTransaction.replace(R.id.frameLayoutMainFragment, speedFragment, null);
 //                fragmentTransaction.addToBackStack("Speed");
-                break;
-            default:
-                DistanceFragment distanceFragment = new DistanceFragment();
-                fragmentTransaction.replace(R.id.frameLayoutMainFragment, distanceFragment, null);
+        } else {
+            DistanceFragment distanceFragment = new DistanceFragment();
+            fragmentTransaction.replace(R.id.frameLayoutMainFragment, distanceFragment, null);
 //                fragmentTransaction.addToBackStack("Distance");
-                break;
         }
         mMainViewModel.setCurrentFragmentIndex(index);
         fragmentTransaction.commit();
@@ -100,7 +97,7 @@ public class MainActivity extends BaseActivity {
 
 //    private LiveData<Integer> mScoreLD = GlobalSettings.inst().getScore();
 
-    private GlobalSettings.Language mLanguage = GlobalSettings.Language.ENGLISH;
+    private final GlobalSettings.Language mLanguage = GlobalSettings.Language.ENGLISH;
 
     private static final String TAG = MainActivity.class.getSimpleName();
 }

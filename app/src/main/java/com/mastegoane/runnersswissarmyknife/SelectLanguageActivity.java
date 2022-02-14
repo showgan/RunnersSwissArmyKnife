@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-
 import com.mastegoane.runnersswissarmyknife.databinding.ActivitySelectLanguageBinding;
 
 public class SelectLanguageActivity extends BaseActivity {

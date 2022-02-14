@@ -14,7 +14,7 @@
     <dimen name="wheel_item_width_distance">90dp</dimen>
     <dimen name="wheel_item_width_distance535">120dp</dimen>
 
-<!--    <dimen name="wheel_text_size">20sp</dimen>-->
+<!--    <dimen name="wheel_text_size">20dp</dimen>-->
     <dimen name="wheel_text_size">15dp</dimen>
     <dimen name="wheel_text_size355">18dp</dimen>
     <dimen name="wheel_text_size535">24dp</dimen>
