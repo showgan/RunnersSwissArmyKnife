@@ -3,15 +3,11 @@ package com.mastegoane.runnersswissarmyknife;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Locale;
 
 public class BaseActivity extends AppCompatActivity {
@@ -40,25 +36,12 @@ public class BaseActivity extends AppCompatActivity {
         }
         Locale locale = Locale.forLanguageTag(localeTag);
 //        Locale.getISOLanguages();
-        if (locale == null) {
-            locale = Locale.ENGLISH;
-        }
         Log.d(TAG, "language: " + locale.getDisplayLanguage());
         Locale.setDefault(locale);
         Configuration configuration = newBase.getResources().getConfiguration();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            configuration.setLocale(locale);
-        } else {
-            configuration.locale = locale;
-        }
+        configuration.setLocale(locale);
         Context newContext;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            newContext = newBase.createConfigurationContext(configuration);
-        } else {
-            Resources resources = newBase.getResources();
-            resources.updateConfiguration(configuration, resources.getDisplayMetrics());
-            newContext = newBase;
-        }
+        newContext = newBase.createConfigurationContext(configuration);
         super.attachBaseContext(newContext);
     }
 
